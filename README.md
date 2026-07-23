@@ -2,7 +2,7 @@
 
 Aesthetic, customizable mirrors — designed to reflect your space.
 
-**Demo:** [mirrorholics.com](https://aurahaus.vercel.app/)
+**Demo:** [madebyaurahaus.com](https://aurahaus.vercel.app/)
 
 ## About
 
