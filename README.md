@@ -1,20 +1,60 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
 # AURAHAUS
->>>>>>> d96c0b9ef85538f6b11cc1c9f8e0ce3e94109f0f
+
+Aesthetic, customizable mirrors — designed to reflect your space.
+
+**Demo:** [mirrorholics.com](https://mirrorholics.com/)
+
+## About
+
+AURAHAUS is the frontend for a startup selling aesthetic, customizable mirrors. This repo contains the static storefront source — a clean, image-first browsing experience for the mirror collection.
+
+## Tech Stack
+
+- React
+- Vite
+- Oxlint
+
+## Features
+
+- Product catalog with clean, image-forward cards
+- Fully responsive layout (mobile, tablet, desktop)
+- Fast static build via Vite
+
+> Update this list with the exact features your build ships (customizer, contact form, etc.)
+
+## Getting Started
+
+```bash
+git clone https://github.com/abdulmalik812/AURAHAUS.git
+cd AURAHAUS
+npm install
+npm run dev
+```
+
+Runs at `http://localhost:5173` by default.
+
+### Build
+
+```bash
+npm run build
+```
+
+Outputs the static site to `dist/`.
+
+## Project Structure
+
+```
+AURAHAUS/
+├── public/          # Static assets
+├── src/             # Application source
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## License
+
+All rights reserved by the AURAHAUS team unless stated otherwise.
+
+---
+Made with 🪞 by [Abdul Malik](https://github.com/abdulmalik812)
