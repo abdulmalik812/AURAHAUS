@@ -22,7 +22,7 @@ export default function BrandStory() {
 
         {/* Content */}
         <div>
-          <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">Our Story</p>
+          <p className="label-eyebrow mb-4">Our Story</p>
           <h2 className="font-heading text-4xl sm:text-5xl text-text-primary leading-[1.1] mb-6">
             CRAFTED WITH PASSION,<br />
             <span className="text-gold-gradient">DESIGNED FOR YOU.</span>

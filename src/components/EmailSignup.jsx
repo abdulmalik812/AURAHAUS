@@ -18,16 +18,16 @@ export default function EmailSignup() {
   return (
     <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 reveal" ref={ref} id="signup-section">
       <div className="max-w-3xl mx-auto text-center">
-        <div className="relative rounded-2xl border border-gold/20 bg-bg-card p-10 sm:p-14 overflow-hidden">
+        <div className="glass-card relative p-10 sm:p-14 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
           <div className="relative z-10">
-            <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-3">Newsletter</p>
+            <p className="label-eyebrow mb-3">Newsletter</p>
             <h2 className="font-heading text-4xl sm:text-5xl text-text-primary mb-3">GET ON THE LIST</h2>
             <p className="text-text-secondary text-sm sm:text-base mb-8 max-w-md mx-auto">
-              Subscribe and get <span className="text-gold font-semibold">10% off</span> your first order. 
+              Subscribe and get <span className="text-gold font-semibold">10% off</span> your first order.
               Be the first to know about new drops, exclusives, and behind-the-scenes content.
             </p>
 
@@ -46,12 +46,12 @@ export default function EmailSignup() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 bg-bg-elevated border border-border rounded-full px-6 py-3.5 text-sm text-text-primary placeholder-text-muted outline-none focus:border-gold transition-colors duration-300"
+                  className="flex-1 bg-bg-elevated border border-[rgba(255,255,255,0.1)] rounded-full px-6 py-3.5 text-sm text-text-primary placeholder-text-muted outline-none focus:border-cyan transition-colors duration-300"
                   id="email-signup-input"
                 />
                 <button
                   type="submit"
-                  className="btn-gold px-8 py-3.5 rounded-full font-semibold text-sm uppercase tracking-wider flex-shrink-0"
+                  className="btn-primary px-8 py-3.5 text-sm uppercase tracking-wider flex-shrink-0"
                   id="email-signup-btn"
                 >
                   Subscribe

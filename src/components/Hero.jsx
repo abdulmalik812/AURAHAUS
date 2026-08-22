@@ -2,56 +2,64 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden" id="hero-section">
-      {/* Background Image */}
+    <section className="relative min-h-[760px] lg:min-h-[820px] flex items-center overflow-hidden" id="hero-section">
+      {/* ── Ambient glow blobs (z-index 1 & 2 via CSS classes) ── */}
+      <div className="hero-glow-cyan" aria-hidden="true" />
+      <div className="hero-glow-amber" aria-hidden="true" />
+      {/* ── Fine grid overlay (z-index 2, fades at bottom) ── */}
+      <div className="hero-grid" aria-hidden="true" />
+
+      {/* Background Image (z-index 0, below glows) */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-banner.png"
           alt="AuraHaus aesthetic mirror in a moody, luxurious room"
           className="w-full h-full object-cover"
         />
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/30 to-bg" />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg/50 via-transparent to-bg/50" />
+        {/* Dark gradient overlays so image reads under glows */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#faf7f1]/45 via-transparent to-[#faf7f1]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#faf7f1]/95 via-[#faf7f1]/55 to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <p className="text-gold uppercase tracking-[0.3em] text-sm sm:text-base font-medium mb-6 animate-fade-up opacity-0 stagger-1">
-          ✦ Premium Aesthetic Mirrors ✦
+      {/* Content — z-10 sits above all background layers */}
+      <div className="hero-content relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-24">
+        <div className="max-w-2xl text-left">
+        <p className="label-eyebrow mb-6 animate-fade-up opacity-0 stagger-1">
+          Handmade mirrors, thoughtfully made in India
         </p>
-        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] text-text-primary animate-fade-up opacity-0 stagger-2">
-          DESIGN YOUR SPACE.
+        <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] text-text-primary normal-case animate-fade-up opacity-0 stagger-2">
+          A beautiful room
           <br />
-          <span className="text-gold-gradient">DEFINE YOUR STYLE.</span>
+          begins with a <em className="text-gold-gradient">reflection.</em>
         </h1>
-        <p className="text-text-secondary text-base sm:text-lg md:text-xl mt-6 max-w-xl mx-auto leading-relaxed font-light animate-fade-up opacity-0 stagger-3">
-          Handcrafted mirrors that transform ordinary walls into extraordinary statements.
+        <p className="text-text-secondary text-base sm:text-lg mt-7 max-w-lg leading-relaxed animate-fade-up opacity-0 stagger-3">
+          Sculptural mirrors for homes that feel considered, personal, and entirely your own.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 animate-fade-up opacity-0 stagger-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4 mt-10 animate-fade-up opacity-0 stagger-4">
           <Link
             to="/shop"
-            className="btn-gold px-10 py-4 rounded-full font-semibold text-sm uppercase tracking-[0.2em] inline-flex items-center gap-2"
+            className="btn-primary px-10 py-4 text-sm uppercase tracking-[0.2em] inline-flex items-center gap-2"
             id="hero-cta"
           >
-            Shop Now
+            Explore the collection
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </Link>
           <Link
-            to="/shop?category=Custom+Mirrors"
-            className="border border-text-secondary/30 text-text-primary hover:border-gold hover:text-gold px-10 py-4 rounded-full font-semibold text-sm uppercase tracking-[0.2em] transition-all duration-300 inline-flex items-center gap-2"
+            to="/custom"
+            className="btn-secondary px-10 py-4 text-sm uppercase tracking-[0.2em] inline-flex items-center gap-2"
           >
-            Custom Orders
+            Create your own
           </Link>
+        </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <div className="w-6 h-10 border-2 border-text-muted rounded-full flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-3 bg-gold rounded-full" />
+          <div className="w-1.5 h-3 bg-cyan rounded-full" />
         </div>
       </div>
     </section>

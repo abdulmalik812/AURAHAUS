@@ -42,7 +42,7 @@ export default function MobileNav({ isOpen, onClose, links }) {
                 key={link.to + link.label}
                 to={link.to}
                 onClick={onClose}
-                className="text-lg uppercase tracking-[0.15em] text-text-secondary hover:text-gold hover:bg-bg-hover py-3 px-4 rounded-lg transition-all duration-300"
+                className="font-heading text-2xl tracking-wide text-text-secondary hover:text-gold hover:bg-bg-hover py-3 px-4 rounded-lg transition-all duration-300"
                 style={{ animationDelay: `${i * 0.05}s` }}
               >
                 {link.label}

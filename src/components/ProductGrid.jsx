@@ -12,7 +12,7 @@ export default function ProductGrid() {
     <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal" ref={ref} id="products-section">
       {/* Heading */}
       <div className="text-center mb-14">
-        <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-3">Curated Selection</p>
+        <p className="label-eyebrow mb-3">Curated Selection</p>
         <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-text-primary">OUR BESTSELLERS</h2>
         <div className="w-16 h-[2px] bg-gold mx-auto mt-4" />
       </div>
@@ -30,7 +30,7 @@ export default function ProductGrid() {
       <div className="text-center mt-14">
         <Link
           to="/shop"
-          className="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-bg px-8 py-3.5 rounded-full text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300"
+          className="btn-secondary inline-flex items-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.2em]"
           id="view-all-btn"
         >
           View All Products
@@ -39,6 +39,7 @@ export default function ProductGrid() {
           </svg>
         </Link>
       </div>
+
     </section>
   );
 }

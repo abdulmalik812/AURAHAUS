@@ -18,15 +18,15 @@ export default function ProductCard({ product }) {
 
   const badgeColors = {
     Sale: 'bg-sale',
-    New: 'bg-gold text-bg',
+    New: 'bg-cyan text-bg',
     Custom: 'bg-purple-600',
   };
 
   return (
-    <div className="product-card group relative" id={`product-card-${product.id}`}>
+    <div className="product-card glass-card group relative overflow-hidden" id={`product-card-${product.id}`}>
       <Link to={`/product/${product.slug}`} className="block">
         {/* Image Container */}
-        <div className="relative aspect-square overflow-hidden rounded-xl bg-bg-elevated mb-4">
+        <div className="relative aspect-square overflow-hidden rounded-t-[19px] bg-bg-elevated mb-0">
           {/* Primary Image */}
           <img
             src={product.images[0]}
@@ -51,10 +51,10 @@ export default function ProductCard({ product }) {
           <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
             <button
               onClick={handleAddToCart}
-              className={`w-full py-3 rounded-lg font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
+              className={`w-full py-3 rounded-xl font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
                 added
                   ? 'bg-success text-white'
-                  : 'btn-gold'
+                  : 'btn-primary'
               }`}
             >
               {added ? '✓ Added!' : 'Quick Add'}
@@ -62,12 +62,15 @@ export default function ProductCard({ product }) {
           </div>
 
           {/* Hover overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-bg/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
+        {/* Hairline divider between image and info */}
+        <div className="border-t divider-hairline" />
+
         {/* Info */}
-        <div className="px-1">
-          <p className="text-xs text-text-muted uppercase tracking-wider mb-1">{product.category}</p>
+        <div className="px-4 py-4">
+          <p className="label-eyebrow mb-1">{product.category}</p>
           <h3 className="text-text-primary font-medium text-sm sm:text-base group-hover:text-gold transition-colors duration-300 line-clamp-1">
             {product.name}
           </h3>

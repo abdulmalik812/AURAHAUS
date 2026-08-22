@@ -45,14 +45,14 @@ export default function TrustBar() {
   const ref = useReveal();
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-y border-border reveal" ref={ref} id="trust-section">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-y border-[rgba(255,255,255,0.07)] reveal" ref={ref} id="trust-section">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
         {props.map((prop, i) => (
           <div
             key={i}
             className="text-center group"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-border group-hover:border-gold text-text-secondary group-hover:text-gold transition-all duration-500 mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-[rgba(255,255,255,0.1)] group-hover:border-cyan text-text-secondary group-hover:text-cyan transition-all duration-500 mb-4">
               {prop.icon}
             </div>
             <h3 className="font-heading text-lg tracking-wider text-text-primary mb-1">{prop.title}</h3>

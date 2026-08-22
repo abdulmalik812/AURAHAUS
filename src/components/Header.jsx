@@ -29,7 +29,7 @@ export default function Header() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/shop', label: 'Shop' },
-    { to: '/shop?category=Custom+Mirrors', label: 'Custom' },
+    { to: '/custom', label: 'Custom order' },
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
   ];
@@ -39,7 +39,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? 'bg-bg/95 backdrop-blur-md shadow-[0_1px_20px_rgba(0,0,0,0.5)] py-3'
+            ? 'bg-[#faf7f1]/95 backdrop-blur-md shadow-[0_1px_20px_rgba(41,31,24,0.08)] py-3'
             : 'bg-transparent py-5'
         }`}
         style={{ top: scrolled ? '0' : '36px' }}

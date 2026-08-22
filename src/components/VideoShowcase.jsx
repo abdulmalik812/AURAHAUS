@@ -8,7 +8,7 @@ export default function VideoShowcase() {
     <section className="py-20 sm:py-28 overflow-hidden reveal" ref={ref} id="showcase-section">
       {/* Heading */}
       <div className="text-center mb-14 px-4">
-        <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-3">Inspiration</p>
+        <p className="label-eyebrow mb-3">Inspiration</p>
         <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-text-primary">SEE IT IN YOUR SPACE</h2>
         <div className="w-16 h-[2px] bg-gold mx-auto mt-4" />
       </div>
